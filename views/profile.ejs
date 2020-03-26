@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <%- include('partials/styling') %>
-
-</head>
-<body>
-    <ul>
+  </head>
+  <body>
+    <div class="profiles">
+      <ul>
         <li><a href="/changeUsername"> Change Username </a></li>
         <li><a href="/changePassword"> Change Password </a></li>
         <li><a href="/deleteAccount"> Delete Account </a></li>
-    </ul>
-</body>
+      </ul>
+    </div>
+    <%- include('partials/navbar') %>
+  </body>
 </html>

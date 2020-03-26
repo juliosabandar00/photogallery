@@ -7,13 +7,14 @@
     <%- include('partials/styling') %>
   </head>
   <body>
-    <h1>This page contains all images from database</h1>
     <div class="images">
       <% images.forEach(image => { %>
+      <div class="image">
         <a href="/gallery/image/<%=image.id%>">
-            <% console.log(image.url) %>
-            <img width="200px" src="<%=image.url%>">
+          <% console.log(image.url) %>
+          <img width="200px" height="200px" src="<%=image.url%>" />
         </a>
+      </div>
       <% }) %>
     </div>
     <%- include('partials/navbar') %>
