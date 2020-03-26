@@ -151,10 +151,20 @@ class Controller {
     }
     static changePassword(req, res){
         User.findOne({where : { username: req.session.user }})
-        .then((data)=> {
-            if (check(data.password, req.body.password)){
-                let newPass = hash(req.body.newUser);
-                User.update({password : newPass}, {where: {username : req.body.username}})
+        .then((data)=> {    
+
+            console.log('current password logged by user:')        
+            console.log(req.body.password)
+
+            console.log('hashed password logged by user:')        
+            // console.log(hash(req.body.newUser));
+
+            console.log('hashed password retrieved from database:')        
+            console.log(data.password)
+
+            if (check(req.body.password, data.password)){
+                console.log('passed')
+                User.update({password : hash(req.body.newPass)}, {where: {username : req.session.user}})
                 res.redirect('/home')
             }else{
                 res.render('editPass', {error : 'Incorrect Password'})

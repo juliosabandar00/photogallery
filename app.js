@@ -4,8 +4,6 @@ const port = 3700;
 const session = require('express-session')
 const indexRouter = require('./routes/index.js')
 const authRouter = require('./routes/authRouter');
-const multer = require('multer')
-const path = require('path')
 
 let config = {
     secret: 'rahasia'
