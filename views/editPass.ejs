@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <%- include('partials/styling') %>
+
 </head>
 <body>
     <h1>Change Password</h1>
@@ -13,6 +15,7 @@
     <form action="changePassword" method="post">
         <label for="password">Password</label>
         <input name = "password" type="password" id="password" placeholder="enter password">
+        <br />
         <label for="newPass"> New Password</label>
         <input name = "newPass" type="password" id="newPass" placeholder="enter new password">
         <button type="submit">Change Password</button>
