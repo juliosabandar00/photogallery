@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery</title>
     <%- include('partials/styling') %>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <% console.log(image.url) %>
-        <img src="<%=image.url%>" width = "500 px">
-        <form action="/gallery/image/vote/<%=image.id%>" method ="post">
-            <button type="submit" name="vote" value="true" class="btn btn-success">Like</button>
-            <button type="submit" name="vote" value="false" class="btn btn-warning">Dislike</button>
-        </form> 
+      <% console.log(image.url) %>
+      <img src="<%=image.url%>" width="500 px" />
+      <form action="/gallery/image/vote/<%=image.id%>" method="post">
+        <button type="submit" name="vote" value="true" class="btn btn-success">
+          Like
+        </button>
+        <button type="submit" name="vote" value="false" class="btn btn-warning">
+          Dislike
+        </button>
+      </form>
     </div>
-</body>
+  </body>
 </html>
