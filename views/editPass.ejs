@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Change Password</h1>
+    <% if(error) { %>
+        <h2> <p>error</p> </h2>
+    <% } %>
+    <form action="changePassword" method="post">
+        <label for="password">Password</label>
+        <input name = "password" type="password" id="password" placeholder="enter password">
+        <label for="newPass"> New Password</label>
+        <input name = "newPass" type="password" id="newPass" placeholder="enter new password">
+        <button type="submit">Change Password</button>
+        <a href="/home" role="button">Cancel</a>
+    </form>
+</body>
+</html>

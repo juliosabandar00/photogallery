@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include('partials/styling') %>
+  </head>
+  <body>
+    <h1>This page contains all images from database</h1>
+    <div class="images">
+      <% images.forEach(image => { %>
+        <a href="/gallery/image/<%=image.id%>">
+            <% console.log(image.url) %>
+            <img width="200px" src="<%=image.url%>">
+        </a>
+      <% }) %>
+    </div>
+    <%- include('partials/navbar') %>
+  </body>
+</html>

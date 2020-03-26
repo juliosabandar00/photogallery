@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Change Username</h1>
+    <% if(error) { %>
+        <h2> <p>error</p> </h2>
+    <% } %>
+    <form action="changeUsername" method="post">
+        <label> old username </label>
+        <label for="username">Username</label>
+        <input name = "username" type="text" id="username" placeholder="enter username">
+        <label for="newUser"> New Username</label>
+        <input name = "newUser" type="text" id="newUser" placeholder="enter new username">
+        <button type="submit">Change Username</button>
+        <a href="/home" role="button">Cancel</a>
+  
+    </form>
+</body>
+</html>

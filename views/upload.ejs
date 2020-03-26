@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <%- include('partials/styling') %> -->
+    <%- include('partials/bootstrap') %>
+  </head>
+  <body>
+    <h1>You can add image by url</h1>
+    <form action="/gallery/image/add" method ="post">
+      <input name = "url" type="text" class="form-control" id="url" placeholder="insert image url">
+      <button type="submit" class="btn btn-primary">Add Image</button>
+    </form>
+    <h1>You can add image by uploading a file</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="image" /><br />
+      <button type="submit">submit</button>
+    </form>
+
+    <!-- <div class="upload">
+      <input type="text" />
+      <button>upload</button>
+    </div> -->
+    <%- include('partials/navbar') %>
+  </body>
+</html>
