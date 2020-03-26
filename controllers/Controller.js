@@ -58,8 +58,9 @@ class Controller {
             } else {
                 console.log(req.file)
                 let newImage = {
-                    url: 'uploads/' + req.file.filename,
+                    url: req.file.path.substring(6),
                 }
+                console.log(newImage.url)
                 Image.create(newImage).then(()=>{
                     res.redirect('/home');
                 });
