@@ -7,7 +7,7 @@
     <%- include('partials/styling') %>
   </head>
   <body>
-    <div>
+    <div class="detail-image">
       <% console.log(image.url) %>
       <img src="<%=image.url%>" width="500 px" />
       <form action="/gallery/image/vote/<%=image.id%>" method="post">
