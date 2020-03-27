@@ -7,16 +7,26 @@
     <%- include('partials/styling') %>
   </head>
   <body>
-    <h1>You can add image by url</h1>
-    <form action="/gallery/image/add" method ="post">
-      <input name = "url" type="text" class="form-control" id="url" placeholder="insert image url">
-      <button type="submit" class="btn btn-primary">Add Image</button>
-    </form>
-    <h1>You can add image by uploading a file</h1>
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-      <input type="file" name="image" /><br />
-      <button type="submit">submit</button>
-    </form>
+    <div class="by-url">
+      <h1>You can add image by url</h1>
+      <form action="/gallery/image/add" method="post">
+        <input
+          name="url"
+          type="text"
+          class="form-control"
+          id="url"
+          placeholder="insert image url"
+        />
+        <button type="submit" class="btn btn-primary">Add Image</button>
+      </form>
+    </div>
+    <div class="by-file">
+      <h1>You can add image by uploading a file</h1>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" class="upload" /><br />
+        <button type="submit">submit</button>
+      </form>
+    </div>
     <%- include('partials/navbar') %>
   </body>
 </html>

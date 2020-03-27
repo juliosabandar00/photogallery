@@ -1,3 +1,7 @@
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+/>
 <style>
   /* GLOBAL */
   * {
@@ -88,14 +92,145 @@
     font-weight: 100;
   }
   /* NAVIGATION */
-  nav.li {
-    list-style-type: none;
+  nav {
+    background-color: #9b9b9b81;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
+  nav a {
+    color: #414141;
+    font-size: 1.2em;
+  }
+  nav a:hover {
+    color: #000000;
+  }
+  nav li {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 20px 10px;
+  }
+  nav ul {
+    display: flex;
+  }
+
+  /* logout */
+  .logout {
+    background-color: #9b9b9b81;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    position: fixed;
+    top: 80%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    padding: 20px 5px;
+  }
+  .logout a {
+    color: #414141;
+    font-weight: 100;
+    font-size: 1em;
+  }
+  .logout a:hover {
+    color: orange;
+  }
+
   /* IMAGE */
   .images {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+  }
+
+  /* UPLOAD */
+  .by-url {
+    width: 30%;
+    text-align: center;
+  }
+
+  .by-file {
+    width: 30%;
+    text-align: center;
+  }
+  .by-file h1,
+  .by-url h1 {
+    font-size: 1.4em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 5px;
+  }
+  .by-file .upload {
+    border-bottom: white 2px solid;
+  }
+
+  .profiles {
+    background: black;
+    width: 350px;
+    margin-top: 100px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .profiles li {
+    list-style-type: none;
+    padding: 30px 5px;
+  }
+  .profiles a {
+    font-size: 1.4em;
+    color: white;
+    letter-spacing: 5px;
+  }
+  .profiles a:hover {
+    color: orange;
+  }
+
+  .change-user-form {
+    width: 50%;
+    text-align: center;
+  }
+  .change-user-form label {
+    font-size: 1.2em;
+    letter-spacing: 5px;
+  }
+  .change-user {
+    margin: 40px auto;
+    text-align: center;
+    color: orange;
+  }
+  .change-user h1 {
+    font-size: 1.5em;
+    letter-spacing: 5px;
+  }
+  .change-pass-form {
+    width: 50%;
+    text-align: center;
+  }
+  .change-user-form label {
+    font-size: 1.2em;
+    letter-spacing: 5px;
+  }
+  .change-pass {
+    margin: 40px auto;
+    text-align: center;
+    color: orange;
+  }
+  .change-pass h1 {
+    font-size: 1.5em;
+    letter-spacing: 5px;
+  }
+
+  .detail-image {
+    text-align: center;
+    margin: 20px auto;
+  }
+  .detail-image img {
+    margin-bottom: 10px;
   }
 </style>
